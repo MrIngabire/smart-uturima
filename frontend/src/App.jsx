@@ -5,7 +5,7 @@ function App() {
   const [stats, setStats] = useState({ total_gardens: 0, active_alerts: 0, auto_tasks: 0 });
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:8000/api/community-stats/')
+    axios.get('https://solid-acorn-q7vp9wqxj4qp3xgx7-8000.app.github.dev/api/community-stats')
       .then(res => setStats(res.data))
       .catch(() => {
         // Removed 'err' since we weren't using it
