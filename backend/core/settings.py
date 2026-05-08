@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "uturima_api",
+    "rest_framework",
 ]
 
 MIDDLEWARE = [
@@ -115,3 +117,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = "static/"
+
+# Add these lines to fix the 403 Forbidden error in Codespaces
+ALLOWED_HOSTS = ['*']
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.app.github.dev',
+    'https://*.preview.app.github.dev',
+    'http://127.0.0.1',
+    'http://localhost',
+]
