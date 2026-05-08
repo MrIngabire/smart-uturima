@@ -136,3 +136,12 @@ SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SAMESITE = 'None'
 SESSION_COOKIE_SAMESITE = 'None'
 CORS_ALLOW_ALL_ORIGINS = True
+
+# Final security settings for GitHub Codespaces
+CORS_ALLOW_ALL_ORIGINS = True 
+ALLOWED_HOSTS = ['*']
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.app.github.dev',
+    'https://*.preview.app.github.dev',
+]
